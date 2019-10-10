@@ -4,8 +4,10 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Redirect
+    Redirect,
 } from 'react-router-dom'
+
+import './assets/styles/global.css'
 
 import { PageBlog } from './routes/blog'
 import { PagePost } from './routes/post'

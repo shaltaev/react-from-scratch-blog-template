@@ -1,7 +1,7 @@
+/* eslint-disable */
+
+const config = require('./src/style/tailwind.config')
+
 module.exports = {
-  theme: {
-    extend: {}
-  },
-  variants: {},
-  plugins: []
+    ...config
 }

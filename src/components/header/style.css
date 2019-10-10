@@ -1,0 +1,7 @@
+.header {
+    @apply flex w-auto p-4 justify-between;
+}
+
+.title {
+    @apply text-xl;
+}

@@ -314,8 +314,13 @@ template {
   padding: 0; }
 
 :root {
-  --color-primary: blue;
-  --color-secondary: lightgray; }
+  --color-primary: #7a9cff;
+  --color-primary-ligth: #c7d5ff;
+  --color-primary-dark: #3c4d80;
+  --color-secondary: #9faacc;
+  --color-dark: #636a80;
+  --color-white: white;
+  --color-balck: rgb(27, 27, 27); }
 
 body {
   @apply font-base; }

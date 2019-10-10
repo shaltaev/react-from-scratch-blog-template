@@ -1,0 +1,3 @@
+.footer {
+    @apply flex w-auto p-4;
+}

@@ -1,0 +1,27 @@
+.layout {
+    @apply max-w-5xl mx-auto;
+
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "content content aside"
+        "footer  footer  footer";
+}
+
+.header {
+    @apply h-20 min-h-full;
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    @apply h-20 min-h-full;
+    grid-area: footer;
+}

@@ -8,7 +8,8 @@
     "scripts": {
         "dev": "TS_NODE_PROJECT=\"tsconfig.webpack.json\" ts-node ./node_modules/.bin/webpack-dev-server --history-api-fallback",
         "style-global": "node-sass src/style/tailwind.scss src/assets/styles/global.css",
-        "css-types": "tcm src/**/**/**/*.css"
+        "css-types": "tcm -p src/**/**/**/*.css",
+        "css-types-watch": "tcm -p src/**/**/**/*.css --watch"
     },
     "devDependencies": {
         "@types/dotenv": "^6.1.1",

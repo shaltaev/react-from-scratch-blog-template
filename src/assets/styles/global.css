@@ -315,15 +315,20 @@ template {
 
 :root {
   --color-primary: #7a9cff;
-  --color-primary-ligth: #c7d5ff;
-  --color-primary-dark: #3c4d80;
-  --color-secondary: #9faacc;
+  --color-bg: #c7d5ff;
+  --color-text: rgb(27, 27, 27);
   --color-dark: #636a80;
   --color-white: white;
-  --color-balck: rgb(27, 27, 27); }
+  --color-balck: rgb(27, 27, 27);
+  --color-transparent: transparent; }
 
 body {
-  @apply font-base; }
+  @apply font-base bg-bg text-text; }
+
+body[theme='dark'] {
+  --color-primary: #3c4d80;
+  --color-bg: #636a80;
+  --color-text: white; }
 
 .clearfix::after {
   clear: both;

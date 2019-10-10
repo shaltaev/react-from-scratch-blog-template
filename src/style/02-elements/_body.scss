@@ -1,3 +1,9 @@
 body {
-  @apply font-base;
+    @apply font-base bg-bg text-text;
+}
+
+body[theme='dark'] {
+    --color-primary: #3c4d80;
+    --color-bg: #636a80;
+    --color-text: white;
 }

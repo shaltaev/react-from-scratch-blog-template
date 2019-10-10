@@ -1,5 +1,5 @@
 {
-    "name": "app",
+    "name": "react-from-scratch-blog-template",
     "version": "0.1.0",
     "main": "src/index.tsx",
     "private": false,

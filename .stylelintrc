@@ -12,7 +12,6 @@
                 "ignoreAtRules": ["extends", "ignores", "tailwind"]
             }
         ],
-        "indentation": 2,
         "unit-whitelist": ["em", "rem", "s", "%", "px"],
         "block-closing-brace-newline-after": "always",
         "order/properties-order": [

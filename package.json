@@ -2,11 +2,13 @@
     "name": "app",
     "version": "0.1.0",
     "main": "src/index.tsx",
-    "private": true,
+    "private": false,
+    "license": "MIT",
     "author": "shaltaev <shaltaev.gleb@gmail.com>",
     "scripts": {
         "dev": "TS_NODE_PROJECT=\"tsconfig.webpack.json\" ts-node ./node_modules/.bin/webpack-dev-server --history-api-fallback",
-        "style-global": "node-sass src/style/tailwind.scss src/assets/styles/global.css"
+        "style-global": "node-sass src/style/tailwind.scss src/assets/styles/global.css",
+        "css-types": "tcm src/**/**/**/*.css"
     },
     "devDependencies": {
         "@types/dotenv": "^6.1.1",
@@ -47,6 +49,7 @@
         "ts-loader": "^6.2.0",
         "ts-node": "^8.4.1",
         "tsconfig-paths": "^3.9.0",
+        "typed-css-modules": "^0.6.2",
         "typescript": "^3.6.4",
         "webpack": "^4.41.0",
         "webpack-cli": "^3.3.9",

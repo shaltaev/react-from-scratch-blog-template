@@ -7,6 +7,8 @@ import { Context } from '~/store/articles'
 import { LayoutDefault } from '~/layouts/default'
 import { Footer } from '~/components/footer'
 import { Header } from '~/components/header'
+import { Aside } from "~/components/Aside";
+
 
 type PostContextType = import('~/store/articles').ContextType
 
@@ -38,14 +40,7 @@ const PageNews: FC = () => {
                     <PageNewsList />
                 </ul>
             }
-            aside={[
-                <Link to={`/articles/new`} key="1">
-                    New article
-                </Link>,
-                <Link to={`/articles`} key="2">
-                    Home
-                </Link>,
-            ]}
+            aside={<Aside />}
             footer={<Footer />}
         />
     )

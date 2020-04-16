@@ -18,6 +18,7 @@
 }
 
 .aside {
+    @apply flex flex-col;
     grid-area: aside;
 }
 

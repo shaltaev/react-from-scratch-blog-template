@@ -1,6 +1,6 @@
 import React, { FC, useContext } from 'react'
 
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { Context } from '~/store/articles'
 
 type PostContextType = import('~/store/articles').ContextType
@@ -8,6 +8,7 @@ type PostContextType = import('~/store/articles').ContextType
 import { LayoutDefault } from '~/layouts/default'
 import { Footer } from '~/components/footer'
 import { Header } from '~/components/header'
+import { Aside } from "~/components/Aside"
 
 const PageArticleReadContent: FC = () => {
     const { postId } = useParams()
@@ -36,14 +37,7 @@ const PageArticleId: FC = () => {
                     <PageArticleReadContent />
                 </ul>
             }
-            aside={[
-                <Link to={`/articles/new`} key="1">
-                    New articles
-                </Link>,
-                <Link to={`/articles`} key="2">
-                    Home
-                </Link>,
-            ]}
+            aside={<Aside />}
             footer={<Footer />}
         />
     )

@@ -317,6 +317,7 @@ template {
   --color-primary: #7a9cff;
   --color-bg: #c7d5ff;
   --color-text: rgb(27, 27, 27);
+  --color-text-error: rgb(200, 57, 57);
   --color-dark: #636a80;
   --color-white: white;
   --color-balck: rgb(27, 27, 27);

@@ -6,8 +6,7 @@ type PostContextType = import('~/store/articles').ContextType
 import { LayoutDefault } from '~/layouts/default'
 import { Footer } from '~/components/footer'
 import { Header } from '~/components/header'
-
-import { Link } from 'react-router-dom'
+import { Aside} from "~/components/Aside";
 
 import { Button } from '~/components/button'
 
@@ -38,14 +37,7 @@ const PageArticleNew: FC = () => {
                     <PageArticleNewContent />
                 </ul>
             }
-            aside={[
-                <Link to={`/articles/new`} key="1">
-                    New articles
-                </Link>,
-                <Link to={`/articles`} key="2">
-                    Home
-                </Link>,
-            ]}
+            aside={<Aside />}
             footer={<Footer />}
         />
     )

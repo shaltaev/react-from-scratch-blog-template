@@ -1,0 +1,15 @@
+.pageLogin {}
+
+.form {}
+
+.errorBox {}
+
+.error {
+    @apply text-text_error;
+}
+
+.inputBox {}
+
+.input {}
+
+.label {}

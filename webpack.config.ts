@@ -1,11 +1,11 @@
 import path from 'path'
 import { ruleDevCss, ruleDevTsx } from './config/webpack/rules'
 import { config as dConfig } from 'dotenv'
-import pluginCratorHtml from 'html-webpack-plugin'
+import pluginCreatorHtml from 'html-webpack-plugin'
 
 dConfig()
 
-const pluginHtml: import('webpack').Plugin = new pluginCratorHtml({
+const pluginHtml: import('webpack').Plugin = new pluginCreatorHtml({
     template: './src/index.template.html'
 })
 

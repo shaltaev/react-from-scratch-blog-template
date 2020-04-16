@@ -5,7 +5,7 @@ const Footer: FC<PropsFooter> = props => {
     const { children } = props
     return (
         <div className={styles.footer}>
-            {'@ 2019, shaltaev'}
+            {'@ 2020, shaltaev'}
             {children}
         </div>
     )

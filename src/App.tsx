@@ -9,23 +9,23 @@ import {
 
 import './assets/styles/global.css'
 
-import { PostsProvider } from './store/posts'
-import { PageBlog } from './routes/blog'
-import { PagePostNew } from './routes/post/new'
-import { PagePostRead } from './routes/post/read'
+import { Provider as ProviderArticles } from './store/articles'
+import { PageNews } from './pages/news'
+import { PageArticleNew } from './pages/article/new'
+import { PageArticleId } from './pages/article/_id'
 
 const App: FC = () => {
     return (
-        <PostsProvider>
+        <ProviderArticles>
             <Router>
                 <Switch>
-                    <Route path="/blog" component={PageBlog} />
-                    <Route path="/post/new" component={PagePostNew} />
-                    <Route path="/post/:postID" component={PagePostRead} />
-                    <Redirect to="/blog" />
+                    <Route path="/news" component={PageNews} />
+                    <Route path="/articles/new" component={PageArticleNew} />
+                    <Route path="/articles/:id" component={PageArticleId} />
+                    <Redirect to="/news" />
                 </Switch>
             </Router>
-        </PostsProvider>
+        </ProviderArticles>
     )
 }
 

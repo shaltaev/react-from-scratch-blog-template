@@ -1,22 +1,22 @@
 import React, { FC, useContext } from 'react'
 
-import { PostsContext } from '../../store/posts'
-type PostContextType = import('../../store/posts').Context
+import { Context } from '~/store/articles'
+type PostContextType = import('~/store/articles').ContextType
 
-import { LayoutDefault } from '../../layouts/default'
-import { Footer } from '../../components/footer'
-import { Header } from '../../components/header'
+import { LayoutDefault } from '~/layouts/default'
+import { Footer } from '~/components/footer'
+import { Header } from '~/components/header'
 
 import { Link } from 'react-router-dom'
 
-import { Button } from '../../components/button'
+import { Button } from '~/components/button'
 
-const PagePostNewContent: FC = () => {
-    const { dispatch } = useContext<PostContextType>(PostsContext)
+const PageArticleNewContent: FC = () => {
+    const { dispatch } = useContext<PostContextType>(Context)
 
     const handleClick = (): void => {
         dispatch({
-            type: 'ADD_NEW_POST',
+            type: 'ADD_NEW_ARTICLE',
             payload: {
                 time: Date.now(),
                 title: `${Date.now()}`,
@@ -29,20 +29,20 @@ const PagePostNewContent: FC = () => {
     return <Button onClick={handleClick}>Mock Editor</Button>
 }
 
-const PagePostNew: FC = () => {
+const PageArticleNew: FC = () => {
     return (
         <LayoutDefault
             header={<Header />}
             content={
                 <ul>
-                    <PagePostNewContent />
+                    <PageArticleNewContent />
                 </ul>
             }
             aside={[
-                <Link to={`/post/new`} key="1">
-                    New post
+                <Link to={`/articles/new`} key="1">
+                    New articles
                 </Link>,
-                <Link to={`/post`} key="2">
+                <Link to={`/articles`} key="2">
                     Home
                 </Link>,
             ]}
@@ -51,4 +51,4 @@ const PagePostNew: FC = () => {
     )
 }
 
-export { PagePostNew }
+export { PageArticleNew }

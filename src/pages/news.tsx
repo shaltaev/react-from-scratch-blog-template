@@ -2,20 +2,20 @@ import React, { FC, useContext } from 'react'
 
 import { Link } from 'react-router-dom'
 
-import { PostsContext } from '../store/posts'
+import { Context } from '~/store/articles'
 
-import { LayoutDefault } from '../layouts/default'
-import { Footer } from '../components/footer'
-import { Header } from '../components/header'
+import { LayoutDefault } from '~/layouts/default'
+import { Footer } from '~/components/footer'
+import { Header } from '~/components/header'
 
-type PostContextType = import('../store/posts').Context
+type PostContextType = import('~/store/articles').ContextType
 
-const PageBlogContent: FC = () => {
-    const { state } = useContext<PostContextType>(PostsContext)
-    if (state.posts.length > 0) {
+const PageNewsList: FC = () => {
+    const { state } = useContext<PostContextType>(Context)
+    if (state.articles.length > 0) {
         return (
             <>
-                {state.posts.map((post, index) => {
+                {state.articles.map((post, index) => {
                     return (
                         <li key={post.time}>
                             <Link to={`post/${index}`}>{post.title}</Link>
@@ -29,20 +29,20 @@ const PageBlogContent: FC = () => {
     }
 }
 
-const PageBlog: FC = () => {
+const PageNews: FC = () => {
     return (
         <LayoutDefault
             header={<Header />}
             content={
                 <ul>
-                    <PageBlogContent />
+                    <PageNewsList />
                 </ul>
             }
             aside={[
-                <Link to={`/post/new`} key="1">
-                    New post
+                <Link to={`/articles/new`} key="1">
+                    New article
                 </Link>,
-                <Link to={`/post`} key="2">
+                <Link to={`/articles`} key="2">
                     Home
                 </Link>,
             ]}
@@ -51,4 +51,4 @@ const PageBlog: FC = () => {
     )
 }
 
-export { PageBlog }
+export { PageNews }

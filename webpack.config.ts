@@ -20,7 +20,10 @@ const config: import('webpack').Configuration = {
         filename: '[name].bundle.js'
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.jsx', '.json']
+        extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
+        alias: {
+            '~': path.resolve(__dirname, 'src')
+        }
     },
     module: {
         rules: isProduction ? [] : [ruleDevCss, ruleDevTsx]

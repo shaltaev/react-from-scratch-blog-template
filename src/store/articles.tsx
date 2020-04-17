@@ -42,7 +42,20 @@ interface Props {
     children: import('react').ReactNode
 }
 
-const initialState: State = { articles: [] }
+const initialState: State = { articles: [
+        {
+            time: Date.now(),
+            title: `Title ${Math.round(Date.now() / 1000) % 100000}`,
+            blocks: [{
+                type: 'header',
+                data: {
+                    text: 'Title Block',
+                    level: 3
+                }
+            }],
+            version: '0.0.1',
+        }
+    ] }
 
 const Provider: import('react').FC<Props> = props => {
     const [state, dispatch] = useReducer(reducer, initialState)

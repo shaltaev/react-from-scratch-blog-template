@@ -29,8 +29,8 @@ const App: FC = () => {
                     <Route path="/news" component={PageNews} />
                     <Route path="/login" component={PageLogin} />
                     <PrivateRoute path="/profile" component={PageProfile} />
-                    <Route path="/articles/new" component={PageArticleNew} />
-                    <Route path="/articles/:id" component={PageArticleId} />
+                    <PrivateRoute path="/article/new" component={PageArticleNew} />
+                    <Route path="/article/:id" component={PageArticleId} />
                     <Redirect to="/news" />
                 </Switch>
             </Router>

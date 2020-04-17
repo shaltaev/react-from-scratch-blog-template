@@ -18,9 +18,15 @@ const PageArticleNewContent: FC = () => {
             type: 'ADD_NEW_ARTICLE',
             payload: {
                 time: Date.now(),
-                title: `${Date.now()}`,
-                blocks: [],
-                version: '0',
+                title: `Title ${Math.round(Date.now() / 1000) % 100000}`,
+                blocks: [{
+                    type: 'header',
+                    data: {
+                        text: 'Title Block',
+                        level: 3
+                    }
+                }],
+                version: '0.0.1',
             },
         })
     }

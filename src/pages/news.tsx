@@ -17,10 +17,10 @@ const PageNewsList: FC = () => {
     if (state.articles.length > 0) {
         return (
             <>
-                {state.articles.map((post, index) => {
+                {state.articles.map((article, index) => {
                     return (
-                        <li key={post.time}>
-                            <Link to={`post/${index}`}>{post.title}</Link>
+                        <li key={article.time}>
+                            <Link to={`article/${index}`}>{article.title}</Link>
                         </li>
                     )
                 })}

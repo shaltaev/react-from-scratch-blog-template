@@ -3,11 +3,16 @@ import styles from './style.css'
 
 import { Button } from '../button'
 
+interface PropsHeader {
+    children?: import('react').ReactNode
+}
+
+
 const Header: FC<PropsHeader> = props => {
-    const [theme, setTheme] = useState<boolean>(false) // false - ligth, true - dark
+    const [theme, setTheme] = useState<boolean>(false) // false - light, true - dark
 
     useEffect(() => {
-        document.body.setAttribute('theme', theme ? 'dark' : 'ligth')
+        document.body.setAttribute('theme', theme ? 'dark' : 'light')
     }, [theme])
 
     const { children } = props
@@ -19,7 +24,7 @@ const Header: FC<PropsHeader> = props => {
                     setTheme(cs => !cs)
                 }}
             >
-                {theme ? 'dark to ligth' : 'ligth to dark'}
+                {theme ? 'dark to light' : 'light to dark'}
             </Button>
             {children}
         </div>

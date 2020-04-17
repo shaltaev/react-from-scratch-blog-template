@@ -1,6 +1,13 @@
 import React, { FC } from 'react'
 import styles from './style.css'
 
+interface PropsButton {
+    children: import('react').ReactNode
+    onClick: (e: import('react').MouseEvent) => void
+    kind?: 'default' | 'outlined'
+    className?: string
+}
+
 const Button: FC<PropsButton> = ({
     onClick,
     children,
